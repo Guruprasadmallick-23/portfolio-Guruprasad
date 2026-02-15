@@ -5,8 +5,8 @@ import {
   Stack,
   Chip,
   Divider,
-  useTheme,
-  useMediaQuery,
+  // useTheme,
+  // useMediaQuery,
 } from "@mui/material";
 import PageWrapper from "../../components/PageWrapper/PageWrapper";
 import WorkIcon from "@mui/icons-material/Work";
@@ -60,8 +60,8 @@ const experiences = [
 ];
 
 export default function Experience() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  // const theme = useTheme();
+  // const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <PageWrapper>
@@ -70,7 +70,8 @@ export default function Experience() {
           maxWidth: "900px",
           margin: "0 auto",
           px: { xs: 2, sm: 3 },
-          py: { xs: 4, md: 8 },
+          py: { xs: 5, md: 8 },
+
         }}
       >
         <Typography
@@ -80,6 +81,7 @@ export default function Experience() {
             fontWeight: 700,
             letterSpacing: 2,
             display: "block",
+            marginTop:"10px"
           }}
         >
           CAREER PATH
