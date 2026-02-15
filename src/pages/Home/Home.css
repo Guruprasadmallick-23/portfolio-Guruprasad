@@ -1,0 +1,34 @@
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 85vh; /* Adjusted for better mobile view */
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #1976d2, #9c27b0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; /* Fixes gradient clip issues on some browsers */
+}
+
+/* Subtle fade-in animation for a premium feel */
+.hero-container {
+  animation: fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ensure no horizontal scroll on small devices */
+body {
+  overflow-x: hidden;
+}
