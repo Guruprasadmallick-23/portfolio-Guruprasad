@@ -1,6 +1,6 @@
 import  { useState } from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import {HashRouter} from "react-router-dom";
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import App from "./App";
 import { getTheme } from "./theme/theme";
@@ -11,12 +11,12 @@ function Root() {
   return (
     <ThemeProvider theme={getTheme(mode)}>
       <CssBaseline />
-      <BrowserRouter>
+      <HashRouter>
         <App
           mode={mode}
           toggle={() => setMode((m) => (m === "light" ? "dark" : "light"))}
         />
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   );
 }
