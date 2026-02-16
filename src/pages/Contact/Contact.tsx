@@ -187,8 +187,7 @@ export default function Contact() {
 
         <Box sx={{ mt: { xs: 6, md: 10 }, textAlign: "center", px: 2 }}>
           <Typography variant="body2" color="text.secondary">
-            Based in India. Open to opportunities across Europe (Germany & EU
-            countries). Visa and travel will be self-managed. Flexible to
+            Based in India. Open to opportunities across Europe . Visa and travel will be self-managed. Flexible to
             relocate with accommodation support.
           </Typography>
         </Box>

@@ -76,7 +76,7 @@ export default function Home() {
           >
             Hi, I'm Guruprasad Mallick. With 4 years of experience, I specialize
             in translating complex business requirements into high-performance
-            applications using React, TypeScript, and Node.js.
+            applications using React, TypeScript and Node.js.
           </Typography>
 
           {/* Action Buttons */}
@@ -89,6 +89,13 @@ export default function Home() {
               variant="contained"
               size="large"
               startIcon={<RocketLaunchIcon />}
+              onClick={() =>
+                window.open(
+                  "https://github.com/Guruprasadmallick-23?tab=repositories",
+                  "_blank",
+                  "noopener,noreferrer",
+                )
+              }
               sx={{
                 px: 4,
                 py: 1.5,

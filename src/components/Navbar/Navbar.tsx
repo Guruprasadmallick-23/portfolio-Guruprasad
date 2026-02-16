@@ -20,6 +20,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import DownloadIcon from "@mui/icons-material/Download"; // Icon for the resume button
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
+import resume from "../../assets/GuruprasadMallickResume.pdf"
 
 interface Props {
   mode: "light" | "dark";
@@ -44,15 +45,13 @@ export default function Navbar({ mode, toggle }: Props) {
 
   // Function to handle Resume Download
   const handleDownloadResume = () => {
-    // Replace this URL with the actual path to your PDF file in the public folder
-    const pdfUrl = "/Guruprasad_Mallick_Resume.pdf";
-    const link = document.createElement("a");
-    link.href = pdfUrl;
-    link.download = "Guruprasad_Mallick_Resume.pdf"; // The name the file will have when downloaded
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  const link = document.createElement("a");
+  link.href = resume; // already a string URL
+  link.download = "Guruprasad_Mallick_Resume.pdf"; // custom download name
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 
   const navStyles = (isActive: boolean) => ({
     px: 2,

@@ -181,7 +181,6 @@ export default function Skills() {
                       fontWeight: 600,
                       borderRadius: "8px",
                       fontSize: { xs: "0.8rem", md: "0.875rem" },
-                      "&:hover": { bgcolor: "primary.main", color: "white" },
                     }}
                   />
                 ))}
