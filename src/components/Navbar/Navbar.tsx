@@ -21,7 +21,8 @@ import CloseIcon from "@mui/icons-material/Close";
 import DownloadIcon from "@mui/icons-material/Download"; // Icon for the resume button
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 // import resume from "../../assets/GuruprasadMallickResume.pdf"
-import resume from "../../assets/guruprasad_mallick_resume.pdf"
+// import resume from "../../assets/guruprasad_mallick_resume.pdf"
+import resume from "../../assets/Sanchita_Barik_resume.pdf"
 
 interface Props {
   mode: "light" | "dark";
@@ -48,7 +49,7 @@ export default function Navbar({ mode, toggle }: Props) {
   const handleDownloadResume = () => {
   const link = document.createElement("a");
   link.href = resume; // already a string URL
-  link.download = "Guruprasad_Mallick_Resume.pdf"; // custom download name
+  link.download = "Sanchita_Barik_Resume.pdf"; // custom download name
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -97,7 +98,7 @@ export default function Navbar({ mode, toggle }: Props) {
                 minWidth: "auto", // Prevents extra spacing
               }}
             >
-              GM<span style={{ color: "#1976d2" }}>.</span>
+              SB<span style={{ color: "#1976d2" }}>.</span>
             </Button>
 
             {/* Desktop Menu */}
