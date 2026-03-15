@@ -12,7 +12,7 @@ export default function About() {
           maxWidth: "800px",
           margin: "0 auto",
           py: { xs: 6, md: 10 },
-          px: { xs: 3, md: 4 },
+          px: { xs: 3, md: 4 }, // Added horizontal padding for mobile
         }}
       >
         {/* Section 1: Professional Identity */}
@@ -29,19 +29,19 @@ export default function About() {
           >
             MY STORY
           </Typography>
-
           <Typography
             variant="h2"
             sx={{
               fontWeight: 800,
               mb: 4,
               lineHeight: 1.2,
+              // Fluid font size to prevent overflow on phone screens
               fontSize: { xs: "2rem", sm: "3rem", md: "3.75rem" },
             }}
           >
-            Building scalable web applications with{" "}
-            <span style={{ color: "#1976d2" }}>clarity</span> and{" "}
-            <span style={{ color: "#1976d2" }}>performance</span>.
+            Building scalable systems with{" "}
+            <span style={{ color: "#1976d2" }}>purpose</span> and{" "}
+            <span style={{ color: "#1976d2" }}>precision</span>.
           </Typography>
 
           <Typography
@@ -53,9 +53,9 @@ export default function About() {
               fontSize: { xs: "1rem", md: "1.25rem" },
             }}
           >
-            I am a Software Developer with 4.5+ years of experience specializing
-            in building scalable, responsive, and high-performance web
-            applications using modern frontend technologies.
+            I am a Senior Software Engineer with 4 years of experience
+            specializing in the design and maintenance of high-performance web
+            applications.
           </Typography>
 
           <Typography
@@ -67,25 +67,10 @@ export default function About() {
               fontSize: { xs: "0.95rem", md: "1rem" },
             }}
           >
-            Currently working at Keylent Inc, I lead frontend development for
-            multiple US-based healthcare and eCommerce platforms. My work
-            involves designing scalable frontend architectures, integrating
-            APIs, and delivering production-ready features. I also mentor junior
-            developers, perform code reviews, and collaborate closely with
-            cross-functional teams to ensure high-quality releases.
-          </Typography>
-
-          <Typography
-            variant="body1"
-            sx={{
-              color: "text.secondary",
-              lineHeight: 1.8,
-              fontSize: { xs: "0.95rem", md: "1rem" },
-            }}
-          >
-            My technical expertise includes Vue.js, Vuex, Pinia, PrimeVue,
-            Tailwind, Nuxt.js, and modern JavaScript/TypeScript ecosystems,
-            allowing me to create efficient and user-centric digital products.
+            My career is focused on translating complex business needs into
+            clean, maintainable code. Currently at Infojini Consulting, I lead
+            frontend development and mentor teams to ensure quality through
+            rigorous unit testing with Jest and Cypress.
           </Typography>
         </Box>
 
@@ -93,7 +78,7 @@ export default function About() {
         <Paper
           elevation={0}
           sx={{
-            p: { xs: 3, md: 4 },
+            p: { xs: 3, md: 4 }, // Reduced padding on mobile
             bgcolor: "action.hover",
             borderRadius: 4,
             border: "1px solid",
@@ -102,7 +87,7 @@ export default function About() {
           }}
         >
           <Stack
-            direction={{ xs: "column", sm: "row" }}
+            direction={{ xs: "column", sm: "row" }} // Stack vertically on mobile
             spacing={{ xs: 3, sm: 4 }}
           >
             {/* Education Block */}
@@ -118,30 +103,29 @@ export default function About() {
                   Education
                 </Typography>
               </Stack>
-
               <Typography
                 variant="body2"
                 sx={{ fontWeight: 600, fontSize: "1rem" }}
               >
-                B.Tech in Computer Science & Engineering
+                Bachelor of Computer Application
               </Typography>
-
               <Typography
                 variant="caption"
                 color="text.secondary"
                 sx={{ fontSize: "0.85rem" }}
               >
-                Calcutta Institute of Engineering and Management, 2016 - 2020
+                Techno India University, 2016-2019
               </Typography>
             </Box>
 
-            {/* Divider */}
+            {/* Responsive Dividers */}
+            {/* Vertical Divider for Tablet/Desktop */}
             <Divider
               orientation="vertical"
               flexItem
               sx={{ display: { xs: "none", sm: "block" } }}
             />
-
+            {/* Horizontal Dashed Divider for Mobile */}
             <Divider
               sx={{
                 display: { xs: "block", sm: "none" },
@@ -159,12 +143,17 @@ export default function About() {
               >
                 <MilitaryTechIcon color="primary" fontSize="small" />
                 <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>
-                  Languages
+                  Communication
                 </Typography>
               </Stack>
-
-              <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap gap={1}>
-                {["English", "Hindi", "Bengali"].map((lang) => (
+              <Stack
+                direction="row"
+                spacing={1}
+                flexWrap="wrap"
+                useFlexGap
+                gap={1}
+              >
+                {["Bengali", "English", "Hindi"].map((lang) => (
                   <Chip
                     key={lang}
                     label={lang}
@@ -186,7 +175,6 @@ export default function About() {
               Beyond the Code
             </Typography>
           </Stack>
-
           <Typography
             variant="body1"
             sx={{
@@ -195,21 +183,26 @@ export default function About() {
               lineHeight: 1.7,
             }}
           >
-            Outside of software development, I enjoy creative activities like
-            dancing and painting. These hobbies help me stay balanced,
-            creative, and energized, which reflects in my problem-solving
-            approach and engineering work.
+            Outside of engineering, I am an avid coin collector and stay active
+            playing badminton. These hobbies help me maintain the discipline and
+            focus I bring to my technical work.
           </Typography>
 
-          <Stack direction="row" spacing={2} flexWrap="wrap" useFlexGap gap={2}>
+          <Stack
+            direction="row"
+            spacing={2}
+            flexWrap="wrap" // Ensures chips wrap on very small screens
+            useFlexGap
+            gap={2}
+          >
             <Chip
-              label="Dancing"
+              label="Numismatics"
               variant="filled"
               color="primary"
               sx={{ fontWeight: 600 }}
             />
             <Chip
-              label="Painting"
+              label="Badminton"
               variant="filled"
               color="secondary"
               sx={{ fontWeight: 600 }}

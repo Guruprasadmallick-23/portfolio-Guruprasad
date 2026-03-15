@@ -16,59 +16,47 @@ import BuildIcon from "@mui/icons-material/Build";
 
 const skillCategories = [
   {
-    title: "Frontend Development",
+    title: "Frontend Mastery",
     icon: <CodeIcon color="primary" />,
     skills: [
-      "Vue.js",
-      "Vuex",
-      "Pinia",
-      "Nuxt.js",
-      "PrimeVue",
-      "Tailwind CSS",
-      "Bootstrap",
-      "Responsive Web Design",
-      "HTML5",
-      "CSS3",
-      "JavaScript",
+      "React JS",
+      "Next JS",
+      "Vue JS",
       "TypeScript",
+      "JavaScript",
+      "Redux",
+      "Material UI",
+      "React Query",
     ],
   },
   {
-    title: "API & Integration",
+    title: "Backend & Systems",
     icon: <StorageIcon color="secondary" />,
     skills: [
-      "REST API Integration",
-      "API Design",
-      "Postman",
-      "Data Flow Optimization",
-      "Cross-System Integrations",
+      "Node JS",
+      "Express JS",
+      "Python (Flask)",
+      "GraphQL",
+      "REST API",
+      "Sequelize",
+      "SQL Alchemy",
     ],
   },
   {
-    title: "Quality & Development Practices",
+    title: "Quality & Testing",
     icon: <SpeedIcon sx={{ color: "#4caf50" }} />,
     skills: [
+      "Cypress (E2E)",
+      "Jest (Unit Testing)",
+      "SonarQube",
       "Code Reviews",
-      "Performance Optimization",
-      "Debugging",
-      "Production Issue Resolution",
-      "Agile Development",
-      "Feature Ownership",
+      "Technical Guidance",
     ],
   },
   {
     title: "Tools & Workflow",
     icon: <BuildIcon sx={{ color: "#ff9800" }} />,
-    skills: [
-      "Git",
-      "GitHub",
-      "GitLab",
-      "Bitbucket",
-      "Jira",
-      "Postman",
-      "VS Code",
-      "Version Control",
-    ],
+    skills: ["VS Code", "GitHub", "Bitbucket", "Postman", "CI/CD Concepts"],
   },
 ];
 
@@ -93,9 +81,8 @@ export default function Skills() {
               display: "block",
             }}
           >
-            TECHNICAL SKILLS
+            TECHNICAL ARMORY
           </Typography>
-
           <Typography
             variant="h2"
             sx={{
@@ -106,12 +93,12 @@ export default function Skills() {
               lineHeight: 1.2,
             }}
           >
-            Expertise built over{" "}
+            Expertise built on{" "}
             <Box component="span" sx={{ color: "primary.main" }}>
-              4.5+ years
-            </Box>
+              4 years
+            </Box>{" "}
+            of code.
           </Typography>
-
           <Typography
             variant="h6"
             color="text.secondary"
@@ -122,9 +109,9 @@ export default function Skills() {
               opacity: 0.9,
             }}
           >
-            Specialized in building scalable Vue.js applications, integrating
-            APIs, and delivering responsive user-focused platforms for
-            healthcare and eCommerce products.
+            From leading junior teams to architecting scalable frontend
+            solutions, my toolkit is designed for enterprise-grade stability and
+            performance.
           </Typography>
         </Box>
 
@@ -132,7 +119,7 @@ export default function Skills() {
         <Box
           sx={{
             display: "grid",
-            gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
+            gridTemplateColumns: { xs: "1fr", sm: "1fr", md: "1fr 1fr" },
             gap: { xs: 3, md: 4 },
           }}
         >
@@ -171,7 +158,6 @@ export default function Skills() {
                 >
                   {cat.icon}
                 </Box>
-
                 <Typography
                   variant="h5"
                   sx={{
@@ -203,7 +189,7 @@ export default function Skills() {
           ))}
         </Box>
 
-        {/* Languages */}
+        {/* Responsive Language Section */}
         <Box sx={{ mt: { xs: 6, md: 8 }, textAlign: "center" }}>
           <Paper
             elevation={0}
@@ -211,12 +197,12 @@ export default function Skills() {
               p: { xs: 2.5, sm: 3 },
               borderRadius: 4,
               display: "inline-flex",
-              flexDirection: { xs: "column", sm: "row" },
+              flexDirection: { xs: "column", sm: "row" }, // Stack on mobile
               alignItems: "center",
               gap: 2,
               border: "1px solid",
               borderColor: "divider",
-              width: { xs: "100%", sm: "auto" },
+              width: { xs: "100%", sm: "auto" }, // Full width on mobile
               maxWidth: "500px",
             }}
           >
@@ -235,7 +221,7 @@ export default function Skills() {
               useFlexGap
               gap={1}
             >
-              {["English", "Hindi", "Bengali"].map((l) => (
+              {["Bengali", "English", "Hindi"].map((l) => (
                 <Chip
                   key={l}
                   label={l}

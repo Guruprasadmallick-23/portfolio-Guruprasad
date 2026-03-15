@@ -17,20 +17,20 @@ const contactMethods = [
   {
     icon: <EmailIcon color="primary" fontSize="large" />,
     label: "Email",
-    value: "sanchitabarik20@gmail.com",
-    href: "mailto:sanchitabarik20@gmail.com",
+    value: "guruprasadmallick333@gmail.com",
+    href: "mailto:guruprasadmallick333@gmail.com",
   },
   {
     icon: <LinkedInIcon color="primary" fontSize="large" />,
     label: "LinkedIn",
-    value: "linkedin.com/in/sanchita-barik-367760195",
-    href: "https://www.linkedin.com/in/sanchita-barik-367760195",
+    value: "linkedin.com/in/guruprasad-mallick",
+    href: "https://www.linkedin.com/in/guruprasad-mallick-80346620a",
   },
   {
     icon: <PhoneIphoneIcon color="primary" fontSize="large" />,
     label: "Phone",
-    value: "+91 9647660377",
-    href: "tel:+919647660377",
+    value: "+91 9735293733",
+    href: "tel:+919735293733",
   },
 ];
 
@@ -51,13 +51,13 @@ export default function Contact() {
           >
             LET'S CONNECT
           </Typography>
-
           <Typography
             variant="h2"
             sx={{
               fontWeight: 800,
               mt: 1,
               mb: 2,
+              // Fluid typography for mobile
               fontSize: { xs: "2.5rem", sm: "3rem", md: "3.75rem" },
             }}
           >
@@ -69,10 +69,9 @@ export default function Contact() {
                 display: { xs: "block", sm: "inline" },
               }}
             >
-              next great product?
+              next big thing?
             </Box>
           </Typography>
-
           <Typography
             variant="h6"
             color="text.secondary"
@@ -83,9 +82,8 @@ export default function Contact() {
               px: 2,
             }}
           >
-            I am currently open to new opportunities and collaborations in
-            frontend development. If you have a role, project, or idea you’d
-            like to discuss, feel free to reach out.
+            I am currently open to new opportunities and collaborations. Whether
+            you have a question or just want to say hi, my inbox is always open!
           </Typography>
         </Box>
 
@@ -101,6 +99,7 @@ export default function Contact() {
                 border: "1px solid",
                 borderColor: "divider",
                 display: "flex",
+                // Stack vertically on mobile, horizontally on tablet+
                 flexDirection: { xs: "column", sm: "row" },
                 alignItems: { xs: "flex-start", sm: "center" },
                 justifyContent: "space-between",
@@ -132,12 +131,10 @@ export default function Contact() {
                 >
                   {method.icon}
                 </Box>
-
                 <Box sx={{ minWidth: 0, flexGrow: 1 }}>
                   <Typography variant="subtitle2" color="text.secondary">
                     {method.label}
                   </Typography>
-
                   <Typography
                     variant="h6"
                     sx={{
@@ -151,7 +148,7 @@ export default function Contact() {
                   </Typography>
                 </Box>
 
-                {/* Desktop Button */}
+                {/* Desktop Send Button (hidden on mobile) */}
                 <IconButton
                   component={Link}
                   href={method.href}
@@ -167,7 +164,7 @@ export default function Contact() {
                 </IconButton>
               </Stack>
 
-              {/* Mobile Button */}
+              {/* Mobile Full-Width Button (hidden on tablet+) */}
               <IconButton
                 component={Link}
                 href={method.href}
@@ -188,13 +185,12 @@ export default function Contact() {
           ))}
         </Stack>
 
-        {/* Footer */}
-        <Box sx={{ mt: { xs: 6, md: 10 }, textAlign: "center", px: 2 }}>
+        {/* <Box sx={{ mt: { xs: 6, md: 10 }, textAlign: "center", px: 2 }}>
           <Typography variant="body2" color="text.secondary">
-            Based in Hyderabad, Telangana, India. Open to remote or relocation
-            opportunities in frontend and full-stack development.
+            Based in India. Open to opportunities across Europe . Visa and travel will be self-managed. Flexible to
+            relocate with accommodation support.
           </Typography>
-        </Box>
+        </Box> */}
       </Container>
     </PageWrapper>
   );

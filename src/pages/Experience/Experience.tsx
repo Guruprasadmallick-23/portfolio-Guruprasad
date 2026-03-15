@@ -5,6 +5,8 @@ import {
   Stack,
   Chip,
   Divider,
+  // useTheme,
+  // useMediaQuery,
 } from "@mui/material";
 import PageWrapper from "../../components/PageWrapper/PageWrapper";
 import WorkIcon from "@mui/icons-material/Work";
@@ -13,54 +15,54 @@ import GroupsIcon from "@mui/icons-material/Groups";
 
 const experiences = [
   {
-    company: "Keylent Inc",
-    role: "Software Developer",
-    period: "Oct 2022 – Present",
+    company: "Infojini Consulting Pvt Ltd",
+    role: "Senior Software Engineer",
+    period: "08/2024 – Present",
     highlights: [
-      "Led frontend development for US-based healthcare and eCommerce platforms using Vue.js and modern frontend architecture.",
-      "Built scalable applications from scratch including UI implementation, API integrations, and production deployments.",
-      "Developed complex healthcare workflows including medical intake forms, lab report processing, and personalized recommendation systems.",
-      "Integrated AI-driven backend APIs for lab analysis and medication or meal recommendations.",
-      "Improved application maintainability by refactoring legacy codebases and optimizing state management.",
-      "Mentored junior developers, conducted code reviews, and collaborated with cross-functional teams for stable releases."
+      "Orchestrating high-performance frontend architectures using React, TypeScript, and modern state management patterns.",
+      "Serving as a technical lead for a 3-member junior development team, fostering a culture of excellence through code reviews.",
+      "Ensuring enterprise-grade stability by implementing automated unit testing with Jest and E2E testing with Cypress.",
+      "Taking full ownership of the development lifecycle, from initial UI conceptualization to production deployment.",
     ],
     tech: [
-      "Vue.js",
-      "Vuex",
-      "Pinia",
-      "PrimeVue",
-      "Tailwind",
-      "Bootstrap",
-      "Nuxt.js",
-      "JavaScript",
+      "React",
       "TypeScript",
-      "REST API"
+      "Node.js",
+      "Sequelize",
+      "SonarQube",
+      "Cypress",
     ],
   },
   {
-    company: "Lemonpeak Consulting Pvt Ltd",
-    role: "Software Developer",
-    period: "Aug 2021 – Sep 2022",
+    company: "KPi-Tech Services",
+    role: "Software Programmer",
+    period: "04/2023 – 07/2024",
     highlights: [
-      "Contributed to the development of a payment gateway platform focused on secure transaction processing.",
-      "Implemented frontend UI and integrated APIs to support payment processor workflows.",
-      "Worked closely with senior developers to build responsive and user-friendly interfaces.",
-      "Helped resolve integration issues and ensured stable production deployments.",
-      "Collaborated within agile teams to deliver secure and scalable financial applications."
+      "Engineered scalable frontend solutions and robust backend services using a polyglot approach with Node.js and Python.",
+      "Optimized end-to-end data flow by designing and integrating complex RESTful APIs.",
+      "Collaborated in cross-functional environments to deliver high-impact features within tight agile sprints.",
+      "Reduced technical debt by proactively debugging and refactoring legacy modules for better performance.",
     ],
-    tech: [
-      "Vue.js",
-      "Vuex",
-      "Bootstrap",
-      "JavaScript",
-      "HTML",
-      "CSS",
-      "REST API"
+    tech: ["React", "Node.js", "Python", "Flask", "SQLAlchemy", "REST API"],
+  },
+  {
+    company: "WebMobi (Mendios Technologies)",
+    role: "Front End Developer",
+    period: "03/2022 – 04/2023",
+    highlights: [
+      "Developed modern, responsive user interfaces utilizing both React and Vue.js frameworks.",
+      "Managed complex application states using Redux and React Query to ensure a seamless user experience.",
+      "Translated high-fidelity design specifications into pixel-perfect components using Material UI (MUI).",
+      "Streamlined frontend-backend communication through efficient RESTful service integrations.",
     ],
+    tech: ["React", "Vue.js", "Redux", "React Query", "Material UI", "Cypress"],
   },
 ];
 
 export default function Experience() {
+  // const theme = useTheme();
+  // const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <PageWrapper>
       <Box
@@ -69,6 +71,7 @@ export default function Experience() {
           margin: "0 auto",
           px: { xs: 2, sm: 3 },
           py: { xs: 5, md: 8 },
+
         }}
       >
         <Typography
@@ -78,12 +81,11 @@ export default function Experience() {
             fontWeight: 700,
             letterSpacing: 2,
             display: "block",
-            marginTop: "10px"
+            marginTop:"10px"
           }}
         >
           CAREER PATH
         </Typography>
-
         <Typography
           variant="h3"
           sx={{
@@ -96,6 +98,7 @@ export default function Experience() {
         </Typography>
 
         <Box sx={{ position: "relative" }}>
+          {/* Central Timeline Line - Adjusted for mobile position */}
           <Box
             sx={{
               position: "absolute",
@@ -117,6 +120,7 @@ export default function Experience() {
                 pl: { xs: 5, md: 8 },
               }}
             >
+              {/* Timeline Dot - Scaled down for mobile */}
               <Box
                 sx={{
                   position: "absolute",
@@ -178,7 +182,6 @@ export default function Experience() {
                     >
                       {exp.role}
                     </Typography>
-
                     <Typography
                       variant="subtitle1"
                       color="primary"
@@ -190,7 +193,6 @@ export default function Experience() {
                       {exp.company}
                     </Typography>
                   </Box>
-
                   <Typography
                     variant="caption"
                     sx={{
@@ -218,7 +220,7 @@ export default function Experience() {
                       variant="body2"
                       sx={{ fontSize: { xs: "0.8rem", md: "0.875rem" } }}
                     >
-                      Mentoring 2 Junior Developers
+                      Mentoring 3 Junior Developers
                     </Typography>
                   </Stack>
                 )}

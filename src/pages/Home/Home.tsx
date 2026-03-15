@@ -15,11 +15,11 @@ export default function Home() {
           className="hero-container"
           sx={{
             py: { xs: 4, sm: 8, md: 15 },
-            textAlign: { xs: "center", md: "left" },
-            alignItems: { xs: "center", md: "flex-start" },
+            textAlign: { xs: "center", md: "left" }, // Centers text on mobile
+            alignItems: { xs: "center", md: "flex-start" }, // Centers items on mobile
           }}
         >
-          {/* Availability Tag */}
+          {/* Tagline / Lead Status */}
           <Stack
             direction="row"
             spacing={1}
@@ -30,41 +30,40 @@ export default function Home() {
             }}
           >
             <Chip
-              label="Open to New Opportunities"
+              label="Available for New Opportunities"
               color="success"
               variant="outlined"
               size="small"
               sx={{ fontWeight: "bold" }}
             />
-
             <Typography
               variant="caption"
               sx={{
                 opacity: 0.7,
                 letterSpacing: 1.5,
                 textTransform: "uppercase",
-                display: { xs: "none", sm: "block" },
+                display: { xs: "none", sm: "block" }, // Hides on very small screens to save space
               }}
             >
-              Software Developer
+              Senior Software Engineer
             </Typography>
           </Stack>
 
-          {/* Main Heading */}
+          {/* Main Headline */}
           <Typography
             variant="h1"
             sx={{
               fontWeight: 800,
-              fontSize: { xs: "2.5rem", sm: "3.5rem", md: "5rem" },
+              fontSize: { xs: "2.5rem", sm: "3.5rem", md: "5rem" }, // Fluid font sizes
               lineHeight: 1.1,
               mb: 3,
             }}
           >
             I build scalable{" "}
-            <span className="text-gradient">web applications</span>.
+            <span className="text-gradient">web architectures</span>.
           </Typography>
 
-          {/* Intro */}
+          {/* Profile Summary */}
           <Typography
             variant="h5"
             color="text.secondary"
@@ -75,15 +74,12 @@ export default function Home() {
               fontSize: { xs: "1.1rem", md: "1.5rem" },
             }}
           >
-            Hi, I'm <b>Sanchita Barik</b>. With 4.5+ years of experience in
-            frontend development, I specialize in building scalable,
-            high-performance applications using the Vue.js ecosystem.
-            Currently working at Keylent Inc, I focus on developing responsive
-            healthcare and eCommerce platforms with modern UI frameworks and
-            clean architecture.
+            Hi, I'm Guruprasad Mallick. With 4 years of experience, I specialize
+            in translating complex business requirements into high-performance
+            applications using React, TypeScript and Node.js.
           </Typography>
 
-          {/* Buttons */}
+          {/* Action Buttons */}
           <Stack
             direction={{ xs: "column", sm: "row" }}
             spacing={2}
@@ -95,9 +91,9 @@ export default function Home() {
               startIcon={<RocketLaunchIcon />}
               onClick={() =>
                 window.open(
-                  "https://github.com/Sanchita-12345?tab=repositories",
+                  "https://github.com/Guruprasadmallick-23?tab=repositories",
                   "_blank",
-                  "noopener,noreferrer"
+                  "noopener,noreferrer",
                 )
               }
               sx={{
@@ -111,7 +107,6 @@ export default function Home() {
             >
               Explore My Projects
             </Button>
-
             <Button
               variant="outlined"
               size="large"
@@ -130,7 +125,7 @@ export default function Home() {
             </Button>
           </Stack>
 
-          {/* Tech Stack */}
+          {/* Tech Stack Preview */}
           <Box sx={{ mt: { xs: 6, md: 8 }, width: "100%" }}>
             <Typography
               variant="overline"
@@ -143,7 +138,6 @@ export default function Home() {
             >
               Core Technologies
             </Typography>
-
             <Stack
               direction="row"
               spacing={3}
@@ -155,14 +149,12 @@ export default function Home() {
               }}
             >
               {[
-                "Vue.js",
-                "Vuex",
-                "Pinia",
-                "PrimeVue",
-                "Tailwind",
-                "Nuxt.js",
-                "JavaScript",
+                "React JS",
+                "Node JS",
                 "TypeScript",
+                "Next JS",
+                "GraphQL",
+                "Python",
               ].map((tech) => (
                 <Typography
                   key={tech}
