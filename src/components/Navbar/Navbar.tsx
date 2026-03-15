@@ -20,7 +20,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import DownloadIcon from "@mui/icons-material/Download"; // Icon for the resume button
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
-import resume from "../../assets/GuruprasadMallickResume.pdf"
+// import resume from "../../assets/GuruprasadMallickResume.pdf"
+import resume from "../../assets/guruprasad_mallick_resume.pdf"
 
 interface Props {
   mode: "light" | "dark";
